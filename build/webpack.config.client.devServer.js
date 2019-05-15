@@ -1,12 +1,15 @@
 const path = require('path');
+const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'development',
     entry: {
-        app: path.join(__dirname, '../client/app.js')
+        app: [
+            'react-hot-loader/patch',
+            path.join(__dirname, '../client/app.js')
+        ]
     },
-
     output: {
         filename: '[name][hash].js',
         path: path.join(__dirname, '../dist'),
@@ -33,7 +36,8 @@ module.exports = {
             {
                 template: path.join(__dirname, path.join('../client/template.html'))
             }
-        )
+        ),
+        new webpack.HotModuleReplacementPlugin()
     ],
 
     devServer: { // 这里一定要注意删除根目录下的打包好的dist文件夹，不然devserver会读取dist文件夹的内容，但是js文件没有在public下，会导致js文件404
@@ -41,6 +45,7 @@ module.exports = {
         publicPath: '/public',
         contentBase: path.join(__dirname, '../dist'),
         port: 9000,
+        hot: true,
         compress: true, //压缩
         open: true,
         historyApiFallback: {
