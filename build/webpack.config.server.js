@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode:'production',
     target: 'node',
     entry: {
         app: path.join(__dirname, '../client/server-entry.js')

@@ -6,7 +6,7 @@ import App from './app.jsx'
 
 const root = document.getElementById('root');
 const render = Component => {
-    ReactDOM.render(
+    ReactDOM.hydrate(
 
         <Component />
         , root)
