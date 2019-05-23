@@ -10,7 +10,11 @@
     "dev:server": "cross-env NODE_ENV=development node ./server/server.js",
     "clean": "rimraf ./dist",
     "build": "npm run clean && npm run build:server && npm run build:client",
-    "start:server": "node ./server/server.js"
+    "start:server": "node ./server/server.js",
+    "lint": "eslint --ext .js,.jsx",
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "author": "Icey",
   "license": "ISC",
@@ -29,7 +33,15 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.3.0",
     "memory-fs": "^0.4.1",
     "react-hot-loader": "^4.8.4",
     "rimraf": "^2.6.3",

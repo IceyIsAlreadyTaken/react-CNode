@@ -1,19 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react' // eslint-disable-line
+import ReactDOM from 'react-dom'
 import App from './app.jsx'
 
-
-
-const root = document.getElementById('root');
+const root = document.getElementById('root')
 const render = Component => {
-    ReactDOM.hydrate(
-
-        <Component />
-        , root)
+  ReactDOM.hydrate(
+    <Component />
+    , root)
 }
-
-render(App);
-
+render(App)
 
 // if (module.hot) {
 //     module.hot.accept('./App.jsx', () => {

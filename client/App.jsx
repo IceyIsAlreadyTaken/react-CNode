@@ -3,12 +3,11 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root'
 
 class App extends React.Component {
-
-    render() {
-        return (
-            <div>This is app12</div>
-        )
-    }
+  render() {
+    return (
+      <div>This is app12</div>
+    )
+  }
 }
 
-export default hot(App);
+export default hot(App)
