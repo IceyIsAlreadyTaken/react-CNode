@@ -11,7 +11,7 @@
     "clean": "rimraf ./dist",
     "build": "npm run clean && npm run build:server && npm run build:client",
     "start:server": "node ./server/server.js",
-    "lint": "eslint --ext .js,.jsx /client,/server"
+    "lint": "eslint --ext .js,.jsx  client/"
   },
   "husky": {
     "hooks": {
