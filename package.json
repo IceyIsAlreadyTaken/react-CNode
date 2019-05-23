@@ -10,7 +10,7 @@
     "dev:server": "cross-env NODE_ENV=development node ./server/server.js",
     "clean": "rimraf ./dist",
     "build": "npm run clean && npm run build:server && npm run build:client",
-    "start:server": "node ./server/server.js",
+    "start:server": "node ./server/server.js /client /server",
     "lint": "eslint --ext .js,.jsx"
   },
   "husky": {
