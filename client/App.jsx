@@ -1,13 +1,9 @@
 
-import React from 'react'
-import { hot } from 'react-hot-loader/root'
+import React from 'react';
+// eslint-disable-next-line
+import { hot } from 'react-hot-loader/root';
 
-class App extends React.Component {
-  render () {
-    return (
-      <div>This is app12</div>
-    )
-  }
-}
+const App = () => (<div>This is app12345</div>);
 
-export default hot(App)
+
+export default hot(App);
