@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn run lint
+  /usr/local/bin/node /usr/local/bin/yarn run dev:server
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS
+  /Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Library/Frameworks/Python.framework/Versions/3.7/bin
 
 Yarn version: 
   1.5.1
@@ -67,7 +67,8 @@ npm manifest:
       "react-hot-loader": "^4.11.1",
       "rimraf": "^2.6.3",
       "webpack-cli": "^3.3.2",
-      "webpack-dev-server": "^3.3.1"
+      "webpack-dev-server": "^3.3.1",
+      "webpack-merge": "^4.2.2"
     }
   }
 
@@ -3716,6 +3717,10 @@ Lockfile:
     version "4.17.11"
     resolved "http://10.80.84.176:4873/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   
+  lodash@^4.17.15:
+    version "4.17.15"
+    resolved "http://10.80.84.176:4873/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  
   loglevel@^1.6.3:
     version "1.6.3"
     resolved "http://10.80.84.176:4873/loglevel/-/loglevel-1.6.3.tgz#77f2eb64be55a404c9fd04ad16d57c1d6d6b1280"
@@ -5815,6 +5820,12 @@ Lockfile:
       ansi-colors "^3.0.0"
       uuid "^3.3.2"
   
+  webpack-merge@^4.2.2:
+    version "4.2.2"
+    resolved "http://10.80.84.176:4873/webpack-merge/-/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
+    dependencies:
+      lodash "^4.17.15"
+  
   webpack-sources@^1.3.0:
     version "1.3.0"
     resolved "http://10.80.84.176:4873/webpack-sources/-/webpack-sources-1.3.0.tgz#2a28dcb9f1f45fe960d8f1493252b5ee6530fa85"
@@ -5946,7 +5957,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c eslint --ext .js,.jsx  client/
+  Arguments: -c cross-env NODE_ENV=development node ./server/server.js
   Directory: /Users/jiaoyy/work/myTest/react-cnode
   Output:
   

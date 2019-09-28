@@ -1,41 +1,17 @@
 const path = require('path')
 const HTMLPlugin = require('html-webpack-plugin')
+const merge = require('webpack-merge')
+const baseConfig = require('./webpack.base')
 
-module.exports = {
+module.exports = merge(baseConfig, {
   entry: {
     app: path.join(__dirname, '../client/app.js')
   },
 
   output: {
-    filename: '[name][hash].js',
-    path: path.join(__dirname, '../dist'),
-    publicPath: '/public'
+    filename: '[name][hash].js'
   },
-  module: {
-    rules: [
-      {
-        enforce: 'pre',
-        test: /\.(js|jsx)$/,
-        use: 'eslint-loader',
-        exclude: [
-          path.resolve(__dirname, '../node_modules')
-        ]
 
-      },
-      {
-        test: /\.jsx$/,
-        use: 'babel-loader'
-      },
-      {
-        test: /\.js$/,
-        use: 'babel-loader',
-        exclude: [
-          path.join(__dirname, '../node_modules')
-        ]
-      }
-    ]
-
-  },
   plugins: [
     new HTMLPlugin(
       {
@@ -44,4 +20,4 @@ module.exports = {
     )
   ]
 
-}
+})
