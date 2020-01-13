@@ -1,5 +1,5 @@
 
-const express = require('express')
+const express = require('express');
 
 const ReactSSR = require('react-dom/server')
 

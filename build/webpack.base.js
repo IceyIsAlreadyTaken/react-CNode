@@ -10,10 +10,16 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.(js|jsx)$/,
-        use: 'eslint-loader',
+        loader: 'eslint-loader',
         exclude: [
           path.resolve(__dirname, '../node_modules')
-        ]
+        ],
+        options: {
+          emitError: true,
+          emitWarning: true,
+          failOnError: true,
+          failOnWarning: true
+        }
 
       },
       {
