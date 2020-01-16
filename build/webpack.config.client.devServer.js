@@ -45,6 +45,9 @@ module.exports = {
     ]
 
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     new HTMLPlugin(
       {
@@ -64,9 +67,11 @@ module.exports = {
     open: true,
     historyApiFallback: {
       rewrites: [
-        { from: /^\/$/, to: '/public/index.html' }
+        { from: /^\/$/, to: '/public/index.html' },
+        { from: /^\/detail$/, to: '/public/index.html' }
       ]
     },
+    // historyApiFallback: true,
     overlay: {
       errors: true
     }

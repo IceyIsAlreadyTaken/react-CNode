@@ -5,8 +5,16 @@
         "node": true
     },
     "extends": "airbnb",
+    "parser": "babel-eslint",
     "rules": {
         "react/jsx-filename-extension": false,
-        "import/no-extraneous-dependencies": false
+        "import/no-extraneous-dependencies": false,
+        "react/prefer-stateless-function": false,
+        "no-console": [
+            0
+        ],
+        "react/prop-types": false,
+        "jsx-a11y/click-events-have-key-events": false,
+        "jsx-a11y/no-static-element-interactions": false
     }
 }

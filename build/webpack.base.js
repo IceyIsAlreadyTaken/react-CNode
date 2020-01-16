@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   output: {
     path: path.join(__dirname, '../dist'),
-    publicPath: '/public'
+    publicPath: ''
   },
   module: {
     rules: [
@@ -35,5 +35,8 @@ module.exports = {
       }
     ]
 
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   }
 }

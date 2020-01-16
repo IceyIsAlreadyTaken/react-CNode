@@ -9,7 +9,7 @@ module.exports = merge(baseConfig, {
   },
 
   output: {
-    filename: '[name][hash].js'
+    filename: '[name].[hash:8].js'
   },
 
   plugins: [
