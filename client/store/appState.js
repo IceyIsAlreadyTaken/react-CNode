@@ -12,7 +12,7 @@ class AppState {
 }
 
 autorun(() => {
-  console.log('autorun count=>', this.count);
+  console.log('autorun count=>');
 });
 
 

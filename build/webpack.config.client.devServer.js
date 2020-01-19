@@ -71,7 +71,9 @@ module.exports = {
         { from: /^\/detail$/, to: '/public/index.html' }
       ]
     },
-    // historyApiFallback: true,
+    proxy: {
+
+    },
     overlay: {
       errors: true
     }

@@ -2,6 +2,8 @@
 const express = require('express');
 
 const ReactSSR = require('react-dom/server');
+const bodyParser = require('body-parser');
+const session = require('express-session');
 
 
 const fs = require('fs');
@@ -12,6 +14,20 @@ const path = require('path');
 
 const isDev = process.env.NODE_ENV === 'development';
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extend: false }));
+
+app.use(session({
+  maxAge: 10 * 60 * 1000,
+  name: 'tid',
+  resave: false,
+  saveUninitialized: false,
+  secret: 'react cnode class'
+}));
+
+app.use('/api/user', require('./utils/handle-login'));
+app.use('/api', require('./utils/proxy'));
 
 app.use(favicon(path.join(__dirname, '../favicon.ico')));
 
