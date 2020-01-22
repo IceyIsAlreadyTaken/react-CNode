@@ -68,11 +68,16 @@ module.exports = {
     historyApiFallback: {
       rewrites: [
         { from: /^\/$/, to: '/public/index.html' },
-        { from: /^\/detail$/, to: '/public/index.html' }
+        { from: /^\/detail$/, to: '/public/index.html' },
+        { from: /^\/testapi$/, to: '/public/index.html' }
       ]
     },
+    // historyApiFallback: true,
     proxy: {
-
+      '/api': {
+        target: 'http://localhost:3333',
+        secure: false
+      }
     },
     overlay: {
       errors: true

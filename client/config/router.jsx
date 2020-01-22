@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import TopicList from '../views/topicList';
 import TopicDetail from '../views/topicDetail';
+import TestApiView from '../views/testApi';
 
 
 export default class Routes extends React.Component {
@@ -13,6 +14,9 @@ export default class Routes extends React.Component {
         </Route>,
         <Route path="/" exact>
           <TopicList />
+        </Route>,
+        <Route path="/testapi">
+          <TestApiView />
         </Route>,
       ]
     );

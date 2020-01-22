@@ -19,6 +19,9 @@ const App = () => (
       <Link to="/">
         Home
       </Link>
+      <Link to="/testapi">
+        TestApi
+      </Link>
       <Routes />
     </Router>
   </Provider>

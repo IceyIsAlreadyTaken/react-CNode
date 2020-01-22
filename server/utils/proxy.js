@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const baseUrl = 'http://cnodejs.org/api/v1';
+const baseUrl = 'https://cnodejs.org/api/v1';
 
 module.exports = function (req, res) {
   const path = req.path;
@@ -28,7 +28,7 @@ module.exports = function (req, res) {
       accesstoken: user.accessToken
     }),
     headers: {
-      'Content-type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/x-www-form-urlencoded'
     }
   }).then(resp => {
     if (resp.status === 200) {
