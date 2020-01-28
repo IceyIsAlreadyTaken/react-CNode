@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn run dev:client
+  /usr/local/bin/node /usr/local/bin/yarn remove react
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Library/Frameworks/Python.framework/Versions/3.7/bin
@@ -48,8 +48,7 @@ npm manifest:
       "http-proxy-middleware": "^0.17.4",
       "mobx": "^5.15.2",
       "mobx-react": "^6.1.5",
-      "react": "^16.8.6",
-      "react-dom": "^16.8.6",
+      "react-dom": "16.8.6",
       "react-router-dom": "^5.1.2",
       "serve-favicon": "^2.5.0",
       "webpack": "^4.31.0"
@@ -6180,7 +6179,7 @@ Lockfile:
       minimist "^1.2.0"
       strip-json-comments "~2.0.1"
   
-  react-dom@^16.8.6:
+  react-dom@16.8.6:
     version "16.8.6"
     resolved "http://10.80.84.176:4873/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
     dependencies:
@@ -6241,15 +6240,6 @@ Lockfile:
       react-is "^16.6.0"
       tiny-invariant "^1.0.2"
       tiny-warning "^1.0.0"
-  
-  react@^16.8.6:
-    version "16.8.6"
-    resolved "http://10.80.84.176:4873/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
-    dependencies:
-      loose-envify "^1.1.0"
-      object-assign "^4.1.1"
-      prop-types "^15.6.2"
-      scheduler "^0.13.6"
   
   read-cmd-shim@^1.0.1, read-cmd-shim@^1.0.4:
     version "1.0.4"
@@ -7886,16 +7876,9 @@ Lockfile:
       yargs-parser "^9.0.2"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.client.devServer.js
-  Directory: /Users/jiaoyy/work/myTest/react-cnode
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:210:5)
-      at maybeClose (internal/child_process.js:1021:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)
+  Error: This module isn't specified in a manifest.
+      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at Object.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:60445:15)
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:109:13

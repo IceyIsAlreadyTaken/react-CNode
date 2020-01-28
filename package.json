@@ -32,8 +32,8 @@
     "http-proxy-middleware": "^0.17.4",
     "mobx": "^5.15.2",
     "mobx-react": "^6.1.5",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "serve-favicon": "^2.5.0",
     "webpack": "^4.31.0"

@@ -1,7 +1,7 @@
 
 const express = require('express');
 
-const ReactSSR = require('react-dom/server');
+const ReactSSR = require('react-dom');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
